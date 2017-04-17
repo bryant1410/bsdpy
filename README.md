@@ -413,17 +413,17 @@ Export list for <ip or hostname of BSDPy server>:
 $ cd ~/; mkdir nbimount
 $ mount -t nfs <ip or hostname>:/nbi ~/nbimount
 $ ls ~/nbimount
-#Sample output
+# Sample output
 DSR-1090.nbi  NI2.nbi  NI.nbi
 
 $ umount ~/nbimount
 $ tftp <ip or hostname>
-#Sample get command
+# Sample get command
 tftp> get /nbi/MyNetBoot.nbi/i386/booter
 Received 174997 bytes in 0.2 seconds
 tftp> quit
 $ ls -l booter
-#Sample output
+# Sample output
 -rwxr-xr-x 1 root root 994464 May 15  2013 booter
 
 $ rm booter
@@ -435,7 +435,7 @@ If TFTP and NFS check out successfully the BSDPy service can be started:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ cd bsdpy
 $ sudo bsdpserver.py
-#Sample output
+# Sample output
 
 DEBUG: BSDPY_NBI_PATH: /nbi  
 DEBUG: BSDPY_IFACE: eth0  
@@ -456,7 +456,7 @@ can specify it in the CLI:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ sudo bsdpserver.py -p /usr/share/netboot
-#Sample output
+# Sample output
 
 DEBUG: BSDPY_NBI_PATH: /usr/share/netboot  
 DEBUG: BSDPY_IFACE: eth0  
